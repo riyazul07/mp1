@@ -4,10 +4,241 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>Riyazul Ansari Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <!-- Sticky Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Riyazul Ansari</h2>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Say Hi!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Developer • Analyst • Designer</h1>
+                <p class="hero-subtitle">Shaping digital solutions with code, data, and design</p>
+                <button class="cta-button">Get In Touch</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I’m a graduate student at UIUC pursuing a Master’s in Information Management with a strong background in software engineering and data analytics. Previously at Tata Consultancy Services, I worked as a Full Stack Developer building secure and scalable financial applications. My interests lie at the intersection of software development, data-driven decision-making, and AI-powered solutions.</p>
+                        <button class="modal-trigger" data-modal="about-modal">Learn More</button>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/riyazul.jpg" alt="Riyazul Ansari">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Carousel Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slides" id="carousel-slides">
+                            <div class="carousel-slide active">
+                                <div class="slide-content">
+                                    <h3>Impact of Climate and Socioeconomic Factors on Mortality</h3>
+                                    <p>Developed predictive models to study how climate variability and socioeconomic inequality influence mortality trends in Illinois (2020–2023)</p>
+                                    <ul>
+                                        <li>Integrated <b>CDC mortality data</b>, <b>NOAA climate data</b>, and <b>Census socioeconomic data</b> into a unified <b>weekly time-series dataset</b> (2020–2023).</li>
+                                        <li>Conducted <b>correlation analysis</b> and <b>time-series forecasting (Prophet)</b> to identify <b>seasonal mortality peaks</b> and long-term trends.</li>
+                                        <li>Developed predictive models using <b>Lasso Regression</b> and <b>XGBoost</b> to assess the impact of climate and socioeconomic factors on mortality.</li>
+                                        <li>Found <b>temperature</b>, <b>snow depth</b>, and <b>poverty rate</b> as the strongest predictors of mortality variations.</li>
+                                        <li>Achieved strong predictive performance with <b>XGBoost (R² = 0.69)</b>, capturing complex interactions between <b>climate conditions</b> and <b>social vulnerabilities</b>.</li>
+                                        <li>Demonstrated that while socioeconomic variables added little value in linear models, they became significant in <b>nonlinear models</b> as interaction factors.</li>
+                                        <li>Insights can inform <b>early warning systems</b>, <b>climate adaptation efforts</b>, and <b>public health strategies</b> targeting vulnerable populations.</li>
+                                        <li>Tools & Technologies: <b>R</b> (Prophet, XGBoost, Lasso), data cleaning & preprocessing, weekly-level feature engineering.</li>
+                                      </ul>                                      
+                                    <div class="project-icon">
+                                        <i class="fas fa-thermometer-half"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <h3>Heart Disease Classification Using Machine Learning</h3>
+                                    <p>Built a predictive ML model to identify patients at risk of heart disease using clinical attributes</p>
+                                    <ul>
+                                        <li>Used the <b>Cleveland Heart Disease dataset</b> (303 records, 13 clinical features such as <b>age, cholesterol, chest pain type, max heart rate</b>, etc.).</li>
+                                        <li>Performed <b>Exploratory Data Analysis (EDA)</b>, feature engineering, and data visualization to uncover hidden risk patterns.</li>
+                                        <li>Implemented and compared <b>Logistic Regression, K-Nearest Neighbors (KNN), and Random Forest</b> models.</li>
+                                        <li><b>Random Forest</b> delivered the best results with <b>88% accuracy</b>, effectively ranking critical predictors like <b>chest pain type (cp)</b>, <b>maximum heart rate (thalach)</b>, and <b>number of vessels (ca)</b>.</li>
+                                        <li>Evaluated models using <b>ROC curves</b>, <b>Precision/Recall</b>, <b>F1-score</b>, and detailed <b>classification reports</b> for reliability.</li>
+                                        <li>Designed a <b>reproducible ML pipeline</b> for preprocessing, model training, and validation.</li>
+                                        <li>Showcased how <b>Machine Learning can aid early diagnosis and prevention</b>, potentially reducing healthcare costs and saving lives.</li>
+                                        <li>Applied Python libraries: <b>NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn</b> for modeling, analysis, and visualization.</li>
+                                      </ul>                                      
+                                    <div class="project-icon">
+                                        <i class="fas fa-heartbeat"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="slide-content">
+                                    <h3>Formula 1 Performance Analytics Dashboard</h3>
+                                    <p>Designed a suite of interactive Tableau dashboards to uncover trends in Formula 1 racing (1950–2024)</p>
+                                    <ul>
+                                        <li>Developed an interactive Tableau suite with <b>4 dashboards</b> analyzing Formula 1 data (1950–2024) using 400K+ records.</li>
+                                        <li><b>Driver Performance (2000–2024):</b> Tracked points, qualifying vs race results, fastest laps, and nationality-based contributions.</li>
+                                        <li><b>Constructor Success:</b> Highlighted team dominance, driver contribution shares, KPI panels, and championship rankings over decades.</li>
+                                        <li><b>Race & Circuit Overview:</b> Explored top circuits, global race distribution, DNF reasons, and yearly calendar growth.</li>
+                                        <li><b>Qualifying Insights:</b> Analyzed pole-to-win probability by circuit, top gainers/losers in race positions, and qualifying consistency across teams and drivers.</li>
+                                        <li>ETL pipeline with <b>Python (Pandas, NumPy)</b> & Tableau Prep for data cleaning, preprocessing, and integration.</li>
+                                        <li>Delivered insights like <b>Hamilton’s dominance (2014–2021)</b>, <b>Verstappen’s rise (2020–2023)</b>, and circuits (e.g., Monaco, Hungary) where qualifying is critical.</li>
+                                        <li>Balanced storytelling and analytics to serve both <b>fans and analysts</b>, enabling interactive exploration of F1’s history.</li>
+                                      </ul>
+                                    <div class="project-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section with Multi-column Layout -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+            <div class="skills-grid">
+        
+                <!-- Programming & Software Development -->
+                <div class="skill-column">
+                <h3><i class="fas fa-laptop-code"></i> Programming &amp; Software Development</h3>
+                <ul>
+                    <li>Python, Java, SQL, R, C/C++, Kotlin</li>
+                    <li>Frameworks: Spring Boot, Hibernate, React.js</li>
+                    <li>APIs: RESTful design, Authentication (JWT, OAuth 2.0)</li>
+                    <li>Testing &amp; Quality: SonarQube, Postman</li>
+                </ul>
+                </div>
+        
+                <!-- Data Engineering & Databases -->
+                <div class="skill-column">
+                <h3><i class="fas fa-database"></i> Data Engineering &amp; Databases</h3>
+                <ul>
+                    <li>SQL (PostgreSQL, MySQL, Oracle, SQL Server, PL/SQL)</li>
+                    <li>Data Modeling, ETL (Pandas, NumPy, Tableau Prep)</li>
+                    <li>Performance: Query optimization, Indexing</li>
+                </ul>
+                </div>
+        
+                <!-- Data Analytics & Visualization -->
+                <div class="skill-column">
+                <h3><i class="fas fa-chart-line"></i> Data Analytics &amp; Visualization</h3>
+                <ul>
+                    <li>Tableau, Power BI, Matplotlib, Seaborn</li>
+                    <li>ML: Scikit-learn (Regression, Classification, Random Forest, KNN, Logistic Regression)</li>
+                    <li>EDA, Feature engineering, Model evaluation </li>
+                    <li>EDA, Data storytelling, Dashboard design </li>
+                </ul>
+                </div>
+        
+                <!-- DevOps & Cloud Tools -->
+                <div class="skill-column">
+                <h3><i class="fas fa-cloud"></i> DevOps &amp; Cloud Tools</h3>
+                <ul>
+                    <li>CI/CD: Jenkins</li>
+                    <li>Containers &amp; Runtime: Docker, Apache Tomcat</li>
+                    <li>Web &amp; Load Balancing: Nginx</li>
+                    <li>Version Control: Git &amp; GitHub</li>
+                </ul>
+                </div>
+
+            </div>
+            </div>
+        </section>
+  
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="contact-video-background">
+                <video autoplay muted loop playsinline>
+                    <source src="./assets/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's Connect</h3>
+                        <p>I'm always interested in new opportunities and exciting projects.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/riyazul-ansari-71b216136/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/riyazul07" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xdkwnqgy" method="POST">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Riyazul Ansari. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div id="about-modal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <h2>More About Me</h2>
+                <p>I hold a Bachelor’s in Computer Science from Goa University and am currently pursuing my Master’s in Information Management at the University of Illinois Urbana-Champaign.</p>
+                <p>Professionally, I served as an Assistant Systems Engineer at Tata Consultancy Services, where I contributed to the iMobilepay banking platform, developing critical modules from user authentication and registration to secure API integrations. I worked across Java, Spring Boot, React.js, and SQL databases, while also strengthening security with JWT, OAuth 2.0, AES, and RSA encryption. On the DevOps side, I automated deployments using Jenkins, improved code quality with SonarQube, and enhanced scalability via Nginx load balancing.</p>
+                <p>With technical expertise in Python, Java, SQL, React.js, Spring Boot, Tableau, and DevOps tools, I aim to build systems that are scalable, data-driven, and user-centric. I am passionate about bridging software engineering with data analytics to solve real-world challenges.</p>
+            </div>
+        </div>
     </body>
 </html>
